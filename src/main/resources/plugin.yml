@@ -1,0 +1,4 @@
+name: CTCore
+version: '${project.version}'
+main: me.msicraft.ctcore.CTCore
+api-version: '1.20'
