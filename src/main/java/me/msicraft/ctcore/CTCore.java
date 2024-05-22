@@ -1,5 +1,6 @@
 package me.msicraft.ctcore;
 
+import me.msicraft.ctcore.Event.EquipmentRelatedEvent;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -20,6 +21,8 @@ public final class CTCore extends JavaPlugin {
     public void onEnable() {
         plugin = this;
         createConfigFiles();
+
+        getServer().getPluginManager().registerEvents(new EquipmentRelatedEvent(this), this);
     }
 
     @Override
